@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memes Generator</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="demo-meme.jpg" alt="meme" id="meme" />
+      <h3 id="title">hahaha!</h3>
+      <div class = "buttons-container">
+        <button id="get-meme-btn">Get Meme</button>
+        <button id="get-meme-btn">Save Meme</button>
+      </div>
+      <% if(!loggedIn) {%>
+        <h4>Save your memes <a href="/login">login</a> | <a href ="/signup">Signup</a> Now</h4>
+      <% } else {%>
+        <h4><a href="/#">View saved memes</a> | <a href="/logout">Logout</a></h4>
+      <% } %>  
+    <!-- Script -->
+    <script src="script.js"></script>
+    
+</html>
