@@ -1,6 +1,7 @@
 let meme = document.getElementById("meme");
 let title = document.getElementById("title");
 let getMemeBtn = document.getElementById("get-meme-btn");
+let saveMemeBtn = document.getElementById("save-meme-btn");
 //API URL
 let url = " https://meme-api.com/gimme/";
 //Array of subreddits of your choice
@@ -26,6 +27,25 @@ let getMeme = () => {
     });
 };
 
+async function saveMeme(){
+  try{
+    const response = await fetch('/savememe', {
+        method: 'post',
+        headers: {'Content-type': 'application/json'},
+        body: JSON.stringify({
+            'meme': meme.src,
+            'title': title.textContent,
+        })
+    })
+    const data = await response.json()
+    console.log(data)
+    location.reload()
+}catch(err){
+    console.log(err)
+}    
+}
+
 //Call the getMeme() on button click and on window load
 getMemeBtn.addEventListener("click", getMeme);
+saveMemeBtn.addEventListener("click", saveMeme)
 window.addEventListener("load", getMeme);

@@ -1,3 +1,5 @@
+const Meme = require('../models/Meme')
+
 module.exports = {
   getIndex: (req, res) => {
     let loggedIn = false;
@@ -6,4 +8,15 @@ module.exports = {
     }
     res.render("index.ejs" , {loggedIn : loggedIn});
   },
+
+  saveMeme: async (req,res) => {
+    try{
+      await Meme.create({memeUrl: req.body.meme , memeDesc : req.body.title})
+      console.log('meme added')
+      res.json('meme added')
+    }
+    catch(err){
+      console.log(err)
+    }
+  }
 };
