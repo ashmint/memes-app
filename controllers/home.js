@@ -11,7 +11,7 @@ module.exports = {
 
   saveMeme: async (req,res) => {
     try{
-      await Meme.create({memeUrl: req.body.meme , memeDesc : req.body.title})
+      await Meme.create({memeUrl: req.body.meme , memeDesc : req.body.title , user: req.user.id})
       console.log('meme added')
       res.json('meme added')
     }
