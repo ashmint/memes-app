@@ -22,7 +22,7 @@ body {
 }
 .container img {
   display: block;
-  height: 25em;
+  height: 22em;
   max-width: 80%;
   margin: 0 auto 1em auto;
 }
@@ -38,9 +38,9 @@ body {
   letter-spacing: 0.03em;
 }
 
-.container h4{
+.container h4, h5{
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 
 .container button {

@@ -6,7 +6,7 @@ module.exports = {
     if(req.user){
       loggedIn = true;
     }
-    res.render("index.ejs" , {loggedIn : loggedIn});
+    res.render("index.ejs" , {loggedIn : loggedIn, user: req.user});
   },
 
   saveMeme: async (req,res) => {

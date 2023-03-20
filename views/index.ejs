@@ -24,6 +24,7 @@
       <% if(!loggedIn) {%>
         <h4>Save your memes <a href="/login">login</a> | <a href ="/signup">Signup</a> Now</h4>
       <% } else {%>
+        <h5>Welcome! <%= user.userName %> </h5>
         <h4><a href="/#">View saved memes</a> | <a href="/logout">Logout</a></h4>
       <% } %>  
     <!-- Script -->
