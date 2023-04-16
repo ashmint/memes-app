@@ -1,14 +1,14 @@
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const passport = require("passport");
-const session = require("express-session");
-const MongoStore = require("connect-mongo")(session);
-const methodOverride = require("method-override");
-const flash = require("express-flash");
-const logger = require("morgan");
-const connectDB = require("./config/database");
-const mainRoutes = require("./routes/main");
+const express = require("express");                               //installs express app
+const app = express();                                            //makes an instance of express app
+const mongoose = require("mongoose");                             //Database
+const passport = require("passport");                             //Auth
+const session = require("express-session");                       //cookies
+const MongoStore = require("connect-mongo")(session);             //cookies
+const methodOverride = require("method-override");                //PUT/DELETE http request middleware for form
+const flash = require("express-flash");                           //flashes the message
+const logger = require("morgan");                                 //debugging
+const connectDB = require("./config/database");                   //DB connect
+const mainRoutes = require("./routes/main");                      //MVC
 
 
 
