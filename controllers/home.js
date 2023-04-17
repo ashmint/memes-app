@@ -1,3 +1,4 @@
+const { memoryStorage } = require('multer');
 const Meme = require('../models/Meme')
 
 module.exports = {
@@ -18,5 +19,18 @@ module.exports = {
     catch(err){
       console.log(err)
     }
+  },
+
+  showMeme: async (req, res) => {
+    try{
+      const memes = await Meme.find({ user: req.user.id})
+      res.render("saved.ejs" , {memes : memes, user: req.user});
+    }
+
+    catch (err) {
+      console.log(err);
+    }
+    
   }
+
 };

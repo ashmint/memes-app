@@ -12,5 +12,6 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 router.post("/savememe", homeController.saveMeme);
+router.get("/saved", ensureAuth, homeController.showMeme);
 
 module.exports = router;

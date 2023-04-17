@@ -12,22 +12,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <script>
+      var parsed_data = <%- JSON.stringify(memes) %> 
+    </script>
+
     <div class="container">
-      <img src="demo-meme.jpg" alt="meme" id="meme" />
-      <h3 id="title">hahaha!</h3>
+      <img src="" alt="meme" id="meme" />
+      <h3 id="title"></h3>
       <div class = "buttons-container">
-        <button id="get-meme-btn">Get Meme</button>
-        <% if(loggedIn) {%>
-        <button id="save-meme-btn">Save Meme</button>
-        <% } %>
+        <button id="next-meme-btn">Next Meme</button>
+
       </div>
-      <% if(!loggedIn) {%>
-        <h4>Save your memes <a href="/login">login</a> | <a href ="/signup">Signup</a> Now</h4>
-      <% } else {%>
         <h5>Welcome! <%= user.userName %> </h5>
-        <h4><a href="/saved">View saved memes</a> | <a href="/logout">Logout</a></h4>
-      <% } %>  
+        <h4><a href="/">Back to generator</a> | <a href="/logout">Logout</a></h4> 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="savedScript.js"></script>
     
 </html>
