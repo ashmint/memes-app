@@ -2,9 +2,6 @@
 
 This memes-app displays random memes and lets users save favorites with a secure login feature.
 
-This project was built by [@ashmint](https://github.com/ashmint), [@Abi-Liu](https://github.com/Abi-Liu), [@bruhngl0](https://github.com/bruhngl0), and [@GPcyber](https://github.com/GPcyber) using HTML, CSS and JS on the front end. Node.js, Express, EJS was used for the backend with the MVC paradigm, and all of the memes information was stored in MongoDB.
-
-
 **Link to project:** https://memes-app.cyclic.app/
 
 - [Budget Tracker:](#Servicely)
