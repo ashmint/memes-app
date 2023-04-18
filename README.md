@@ -1,3 +1,8 @@
+# Prerequisites
+
+This application requires you to have NPM installed.
+You can do so by running `npm install npm@latest -g`
+
 # Install
 
 `npm install`
